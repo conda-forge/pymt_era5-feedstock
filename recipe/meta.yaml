@@ -1,5 +1,5 @@
 {% set name = "pymt_era5" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gantian127/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: acdb40569e333ccfa42ad288ab6cd66c5aa7791e83f808330b1f2f41b6f83444
+  sha256: 5dfa34c2e82143fe2ccdbd2cf6970c43a40f6752942a333cc82bf9874662a322
 
 build:
   noarch: python
@@ -16,13 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10
     - pip
+    - setuptools
   run:
-    - python >=3.6
-    - bmi_era5 >=0.1.4
+    - python >=3.10
+    - bmi_era5 >=0.2.0
 
 test:
+  requires:
+    - setuptools
   imports:
     - pymt_era5
 
