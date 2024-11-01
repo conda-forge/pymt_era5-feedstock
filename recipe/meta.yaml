@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.10
     - pip
+    - setuptools
   run:
-    - python >=3.6
-    - bmi_era5 >=0.1.4
+    - python >=3.10
+    - bmi_era5 >=0.2.0
 
 test:
   imports:
