@@ -24,6 +24,8 @@ requirements:
     - bmi_era5 >=0.2.0
 
 test:
+  requires:
+    - setuptools
   imports:
     - pymt_era5
 
